@@ -156,7 +156,7 @@ for (let j = 0; j < allcount_event; j++) {
         await expect(card1.locator('span:has-text("seats available")')).toBeVisible();
 
         const seatTextAfterBooking = (await card1.locator('span:has-text("seats available")').textContent()).trim();
-        console.log(`****Seats info_after Booking:***** ${seatTextAfterBooking}`);
+        console.log(`***Seats info_after Booking:**** ${seatTextAfterBooking}`);
 
         const seatNumberAfterBooking = parseInt(seatTextAfterBooking.match(/\d+/)[0], 10);
 
