@@ -96,7 +96,7 @@ test('Assignment1', async ({ page }) => {
             await card.locator(' #book-now-btn').click();
             await expect(page.locator('#ticket-count')).toHaveText('1');
             const ticketCount = await page.locator('.ticket-count').textContent();
-            console.log('default_Ticket_Count_is', ticketCount);
+            console.log('default_Ticket_Count is', ticketCount);
             break;
         }
     }
