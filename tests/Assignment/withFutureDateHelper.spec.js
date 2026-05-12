@@ -57,7 +57,7 @@ test('Assignment1', async ({ page }) => {
     await page.locator('#add-event-btn').click();
     await expect(page.getByText('Event created!')).toBeVisible({ timeout: 5000 });
 
-    console.log("Step 2 — Create a new event_Successfully");
+    console.log("Step_2 — Create a new event_Successfully");
     console.log(`Created event: ${eventTitle} with date ${eventDate_Time}`); 
     //**************Step 3 — Find the event card and capture seats****************** 
 
