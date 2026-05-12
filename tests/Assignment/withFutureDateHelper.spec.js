@@ -38,7 +38,7 @@ test('Assignment1', async ({ page }) => {
     await page.getByPlaceholder('••••••').fill(passWord);
     await page.locator('#login-btn').click();
     await page.waitForLoadState('networkidle');
-    console.log("Step 1 — Login_Executed successfully");
+    console.log("Step_1 — Login_Executed successfully");
 
     //**********************Step 2 — Create a new event****************
    await expect(page.locator('span', { 'hasText': 'Browse Events →' })).toBeVisible();
