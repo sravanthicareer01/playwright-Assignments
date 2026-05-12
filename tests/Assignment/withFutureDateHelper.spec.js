@@ -122,7 +122,7 @@ test('Assignment1', async ({ page }) => {
     await expect(page.locator('#booking-card').first()).toBeVisible();
     const eventCount = await page.locator('#booking-card').count();
     await console.log(eventCount);
-    let found;
+    let found = false;
     for (let i = 0; i < eventCount; i++) {
         const eventText = (await allEventName.nth(i).textContent()).trim();
         console.log('booked_Event_name', eventText);
@@ -131,9 +131,10 @@ test('Assignment1', async ({ page }) => {
             found = true;
             break;
         }
+        
 
     }
-    expect(found).toBeTruthy(); // 
+   expect(found).toBeTruthy(); 
 
 
 
