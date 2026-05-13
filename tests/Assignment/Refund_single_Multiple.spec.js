@@ -56,8 +56,8 @@ test('eligible for refund_multiple_Tickets', async ({ page }) => {
     await page.locator('#nav-events');
     await page.locator('#event-card').first().getByTestId('book-now-btn').click();
     await expect(page).toHaveURL('https://eventhub.rahulshettyacademy.com/events/3');
-    const ticket_Count_1 = await page.locator('#ticket-count').textContent();
-    await console.log(ticket_Count_1);
+    const ticket_Count_3 = await page.locator('#ticket-count').textContent();
+    await console.log(ticket_Count_3);
     await page.locator('button:has-text("+")').click();
     await page.locator('button:has-text("+")').click();
     const ticket_Count_3 = await page.locator('#ticket-count').textContent();
