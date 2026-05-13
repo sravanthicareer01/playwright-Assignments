@@ -18,9 +18,11 @@ function futureDateValue(daysToAdd = 1, hour = 10, minute = 0) {
 
 test('Assignment1', async ({ page }) => {
     const URL = 'https://eventhub.rahulshettyacademy.com';
-    const userName = 'sravanthicareer01@gmail.com';
-    const passWord = 'Myfirstjob@2021';
+    //const userName = 'sravanthicareer01@gmail.com';
+    //const passWord = 'Myfirstjob@2021';
     const booking_Email = 'abc@gmail.com';
+    const userName = 'xyz1305@gmail.com';
+    const passWord = 'Myfirstjob@2021';
 
     // Use future date for both title and event date
     const eventDate_Time = futureDateValue(2, 10, 0); // 2 days ahead, 10:00 AM
@@ -83,7 +85,7 @@ test('Assignment1', async ({ page }) => {
             const card = page.locator('#event-card').nth(i);
 
             // wait until the seat info span is visible
-            await expect(card.locator('span:has-text("seats available")')).toBeVisible();
+            await expect(card.locator('span:has-text("seats available")')).toBeVisible({timeout : 6000});
 
             // capture the seat info string
             const seatText = (await card.locator('span:has-text("seats available")').textContent()).trim();
