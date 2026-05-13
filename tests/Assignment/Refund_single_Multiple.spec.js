@@ -60,7 +60,6 @@ test('eligible for refund_multiple_Tickets', async ({ page }) => {
     await console.log(ticket_Count_3);
     await page.locator('button:has-text("+")').click();
     await page.locator('button:has-text("+")').click();
-    const ticket_Count_3 = await page.locator('#ticket-count').textContent();
     await console.log(ticket_Count_3); // increased to 3 
     // Booking by filling required details
     await page.locator('#customerName').fill('Sravanthi3');
