@@ -91,7 +91,7 @@ test('eligible for refund_multiple_Tickets', async ({ page }) => {
     await expect(result3).toContainText('Not eligible for refund');
     await expect(result3).toContainText('Group bookings (3 tickets) are non-refundable');
     const final3=await result3.textContent();
-    await console.log(final3);
+    await console.log('Refund Message',final3);
 });
 
 
