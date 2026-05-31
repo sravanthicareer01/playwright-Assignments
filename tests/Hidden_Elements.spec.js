@@ -15,7 +15,7 @@ test('Navigators', async ({ page }) => {
     await page.goto("https://www.google.com/");
     await page.goBack(); // back arrow
     await page.goForward();// forward arrow
-    await console.log("Navigations_works_as_Expected_Confirmation");
+    await console.log("Navigations_works_as_Expected_Confirmation_Message");
 })
 test.only('alert_DialogBoxes', async ({ page }) => {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
